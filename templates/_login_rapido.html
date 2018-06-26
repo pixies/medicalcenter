@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+
+    <form class="col s12">
+        <h6 class="pink-text accent-3">Área do Paciente</h6>
+      <div class="container">
+      <div class="row white transparent">
+        <div class="input-field col s12 m6 l12">
+          <i class="material-icons prefix pink-text accent-3">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix" class="pink-text accent-3">Nome de Usuário</label>
+        </div>
+        <div class="input-field col s12 m6 l12">
+          <i class="material-icons prefix pink-text accent-3">enhanced_encryption</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone" class="pink-text accent-3">Sua senha</label>
+        </div>
+          <input type="submit" value="Entrar">
+      </div>
+      </div>
+    </form>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'images/bg-atendimentos.jpg' %}" alt="Unsplashed background img 2"></div>
+  </div>

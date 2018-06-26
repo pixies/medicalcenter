@@ -1,0 +1,28 @@
+{% load static %}
+{% block about %}
+<div class="container">
+    <div class="section pink lighten-4">
+      <div class="row container">
+        <div class="col l9 s12 m9">
+            <h3 class="header titulo_section">Dr. Lourival</h3>
+            <p class="grey-text text-darken-3 lighten-3">Formado pela Universidade Federal de Pernambuco, possui residência médica em Ginecologia e Obstetricia e especialização em colposcopia pela mesma instituição. Especialização em Ultrassonografia Ginecológica e Obstétricia pelo Cetrus.</p>
+        </div>
+        <div class="col l3 s12 m3 center">
+            <img style="margin-top: 50px;" class="responsive-img circle" src="{% static 'images/perfil-mini.jpg' %}" alt="">
+        </div>
+      </div>
+
+      <div class="row container center">
+          <div class="col l4 s12 m4">
+            <i class="mdi mdi-instagram mdi-48px" aria-hidden="true"></i><br><span>@lourivalrodriguesgo</span>
+          </div>
+          <div class="col l4 s12 m4">
+            <i class="mdi mdi-facebook-box mdi-48px" aria-hidden="true"></i><br><span>@lourivalrodriguesgo</span>
+          </div>
+          <div class="col l4 s12 m4">
+            <i class="mdi mdi-phone-in-talk mdi-48px" aria-hidden="true"></i><br><span>(87)9966-94511</span>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock about %}
