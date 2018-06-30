@@ -1,0 +1,25 @@
+profile do git
+git config --global user.name "Cleisson Fabricio"
+git config --global user.email "cleissonf@gmail.com"
+
+baixar repositório do git
+git clone http://<endereço>
+
+verifica o status de alterações do projeto
+git status
+
+remove pasta do projeto
+git rm -rf <pasta>
+
+efetiva a alteração no projeto
+git commit
+
+efetiva a alteração no projeto com mensagem
+git commit -m "mensagem"
+
+envia para o repositório do git
+git push origin master
+
+baixa as alteração no repositório do git
+git pull origin master
+
