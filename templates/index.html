@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +12,10 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
     <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     -->
@@ -22,10 +23,10 @@
     <link rel="stylesheet" href="http://cdn.materialdesignicons.com/2.2.43/css/materialdesignicons.min.css">
     
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="{% static 'css/creative.css' %}" rel="stylesheet">
 
 
     <style> 
@@ -75,7 +76,7 @@
         </style>
 
         <style>
-        section#contact{background-color:#212529;background-image:url(../img/map-image.png);background-repeat:no-repeat;background-position:center}section#contact .section-heading{color:#fff}section#contact .form-group{margin-bottom:25px}section#contact .form-group input,section#contact .form-group textarea{padding:20px}section#contact .form-group input.form-control{height:auto}section#contact .form-group textarea.form-control{height:248px}section#contact .form-control:focus{border-color:#fed136;box-shadow:none}section#contact ::-webkit-input-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact :-moz-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact ::-moz-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact :-ms-input-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+        section#contact{background-color:#212529;background-image:url({% static '../img/map-image.png' %});background-repeat:no-repeat;background-position:center}section#contact .section-heading{color:#fff}section#contact .form-group{margin-bottom:25px}section#contact .form-group input,section#contact .form-group textarea{padding:20px}section#contact .form-group input.form-control{height:auto}section#contact .form-group textarea.form-control{height:248px}section#contact .form-control:focus{border-color:#fed136;box-shadow:none}section#contact ::-webkit-input-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact :-moz-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact ::-moz-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact :-ms-input-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
         footer{padding:25px 0;text-align:center;box-shadow: -10px 0px 20px 1px gray;}footer span.copyright{font-size:90%;line-height:40px;text-transform:none;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}footer ul.quicklinks{font-size:90%;line-height:40px;margin-bottom:0;text-transform:none;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
         </style>
   </head>
@@ -85,7 +86,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo-white.png" alt=""></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{% static 'img/logo-white.png' %}" alt=""></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -138,7 +139,7 @@
       <div class="container" >
           <div class="row">
             <div class="col-md-4 text-center">
-              <img style="height: 200px; width: 200px;" class="center responsive-img rounded-circle" src="img/perfil-mini.jpg" alt="">
+              <img style="height: 200px; width: 200px;" class="center responsive-img rounded-circle" src="{% static 'img/perfil-mini.jpg' %}" alt="">
             </div>
             <div class="col-md-8 mx-auto text-justify">
                 <h2 class="section-heading text-white text-center text-md-left">Dr. Lourival</h2>
@@ -180,42 +181,42 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 text-center card text-white" id="card-left" style="background-color: #fff">
             <div class="service-box mt-5 mx-auto">
-                <img src="img/servicos/icone_utero.png" alt="">
+                <img src="{% static 'img/servicos/icone_utero.png' %}" alt="">
               <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Consulta Ginecológica</h3>
               <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">O Ginecologista tem papel bastante na vida da mulher, desde a adolescência até a idade adulta. É esse profissional que vai acompanhá-la por toda sua vida, provendo informações, realizando prevenções, tratamentos e controlando sua saúde.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" id="card-right">
             <div class="service-box mt-5 mx-auto">
-                <img src="img/servicos/pre-natal.png" alt="">
+                <img src="{% static 'img/servicos/pre-natal.png' %}" alt="">
               <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Pré-Natal</h3>
               <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">É importante que a s futuras mamães comecem a fazer seu pré-natal assim que tiverem a gravidez confirmada ou antes mesmo de pensar em engravidar, alguns exames e medicações são importantes para prevenir problemas que possam afetar a criança ou o seu desenvolvimento ainda no útero.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 text-center card text-white" id="card-right">
             <div class="service-box mt-5 mx-auto">
-              <img src="img/servicos/preventivo.png" alt="">
+              <img src="{% static 'img/servicos/preventivo.png' %}" alt="">
               <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Exame Preventivo</h3>
               <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;" >O exame preventivo do câncer do colo do útero (Papanicolau) é a principal estratégia para detectar lesões no colo do útero. É indolor, simples e rápido. Mulheres grávidas também podem se submeter ao exame, sem prejuízo para a saúde do bebê. Para realizar a mulher não pode está menstruada ou ter relações no dia anterior ao exame.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" id="card-left">
             <div class="service-box mt-5 mx-auto">
-                <img src="img/servicos/colposcopia.png" alt="">
+                <img src="{% static 'img/servicos/colposcopia.png' %}" alt="">
               <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Colposcopia</h3>
               <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">É um exame que permite visualizar a vagina e o colo do útero através de um aparelho chamado Colposcópio. Este exame é um grande aliado no diagnóstico e tratamento do HPV e do câncer do colo do útero. O exame é realizado no próprio consultório médico, é indolor. Pode ser realizado em mulheres grávidas.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" id="card-left">
               <div class="service-box mt-5 mx-auto">
-                  <img src="img/servicos/ultrason.png" alt="">
+                  <img src="{% static 'img/servicos/ultrason.png' %}" alt="">
                 <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Ultrassonografia Obstétrica</h3>
                 <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">A ultrassonografia, conhecida também como ecografia, é um exame não invasivo que consiste na emissão de ondas de som com o intuito de criar uma imagem. Na ultrassonografia obstétrica, observamos o feto, a placenta, o líquido e muitas outras coisas sobre como anda o seu bebê.</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" id="card-right">
                 <div class="service-box mt-5 mx-auto">
-                    <img src="img/servicos/transvaginal.png" alt="">
+                    <img src="{% static 'img/servicos/transvaginal.png' %}" alt="">
                   <h3 class="mb-3 text-center card-header" style="height: 100px; background-color: #fff; color: black;">Ultrassonografia Transvaginal</h3>
                   <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">A ultrassonografia, conhecida também como ecografia, é um exame não invasivo que consiste na emissão de ondas de som com o intuito de criar uma imagem. Na ultrassonografia transvaginal, observamos o útero e seus anexos, ainda é precisa no diagnóstico de várias doenças que acomete a região pélvica da mulher.</p>
                 </div>
@@ -271,7 +272,7 @@
                   </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100" style="width: 800px; height: 300px;" src="img/fundoslide.jpg" alt="First slide">
+                      <img class="d-block w-100" style="width: 800px; height: 300px;" src="{% static 'img/fundoslide.jpg' %}" alt="First slide">
                       <div class="carousel-caption d-none d-md-block" style="background-color:#ff6699;opacity: 0.5;">
                           <h4>
                               <i class="mdi mdi-format-quote-open mdi-48px"></i>
@@ -281,7 +282,7 @@
                       </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" style="width: 800px; height: 300px;" src="img/fundoslide.jpg" alt="First slide">
+                        <img class="d-block w-100" style="width: 800px; height: 300px;" src="{% static 'img/fundoslide.jpg' %}" alt="First slide">
                         <div class="carousel-caption d-none d-md-block" style="background-color:#ff6699;opacity: 0.5;">
                             <h4>
                                 <i class="mdi mdi-format-quote-open mdi-48px"></i>
@@ -291,7 +292,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" style="width: 800px; height: 300px;" src="img/fundoslide.jpg" alt="First slide">
+                        <img class="d-block w-100" style="width: 800px; height: 300px;" src="{% static 'img/fundoslide.jpg' %}" alt="First slide">
                         <div class="carousel-caption d-none d-md-block" style="background-color:#ff6699;opacity: 0.5;">
                             <h4>
                                 <i class="mdi mdi-format-quote-open mdi-48px"></i>
@@ -408,7 +409,7 @@
                   <div class="row">
                     <div class="col-lg-4 col-md-6 text-center card text-white" id="card-left" style="background-color: #fff">
                       <div class="service-box mt-2 mx-auto">
-                          <img src="img/blog/vacina.jpg" style="height: 220px; width: 100%;" alt="">
+                          <img src="{% static 'img/blog/vacina.jpg' %}" style="height: 220px; width: 100%;" alt="">
                         <h5 class="card-header" style="height: 100px; background-color: #fff; color: black;">O que você precisa saber sobre a vacina da Febre Amarela</h5>
                         <span class="text-center text-dark">Publicado em: 13 de janeiro de 2018</span>
                         <p class="text-muted text-justify card-body" style="text-align-last: left; margin-top: -10px">O Ginecologista tem papel bastante na vida da mulher, desde a adolescência até a idade adulta. É esse profissional que vai acompanhá-la por toda sua vida [...]</p>
@@ -416,7 +417,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 text-center card text-white" id="card-left" style="background-color: #fff">
                         <div class="service-box mt-2 mx-auto">
-                            <img src="img/blog/vacina.jpg" style="height: 220px; width: 100%;" alt="">
+                            <img src="{% static 'img/blog/vacina.jpg' %}" style="height: 220px; width: 100%;" alt="">
                           <h5 class="card-header" style="height: 100px; background-color: #fff; color: black;">O que você precisa saber sobre a vacina da Febre Amarela</h5>
                           <span class="text-center text-dark">Publicado em: 13 de janeiro de 2018</span>
                           <p class="text-muted text-justify card-body" style="text-align-last: left; margin-top: -10px">O Ginecologista tem papel bastante na vida da mulher, desde a adolescência até a idade adulta. É esse profissional que vai acompanhá-la por toda sua vida [...]</p>
@@ -424,7 +425,7 @@
                       </div>
                       <div class="col-lg-4 col-md-6 text-center card text-white" id="card-left" style="background-color: #fff">
                           <div class="service-box mt-2 mx-auto">
-                              <img src="img/blog/vacina.jpg" style="height: 220px; width: 100%;" alt="">
+                              <img src="{% static 'img/blog/vacina.jpg' %}" style="height: 220px; width: 100%;" alt="">
                             <h5 class="card-header" style="height: 100px; background-color: #fff; color: black;">O que você precisa saber sobre a vacina da Febre Amarela</h5>
                             <span class="text-center text-dark">Publicado em: 13 de janeiro de 2018</span>
                             <p class="text-muted text-justify card-body" style="text-align-last: left; margin-top: -10px">O Ginecologista tem papel bastante na vida da mulher, desde a adolescência até a idade adulta. É esse profissional que vai acompanhá-la por toda sua vida [...]</p>
@@ -436,16 +437,13 @@
 
             </section>
 
-
-
-
             <footer>
                 <div class="container">
                   <div class="row">
                     <div class="col-md-6  text-left">
                       <b>Dr. Lourival Rodriguês </b>| Ginecologia e Obstetricia | CRM-SP XXXXXXX <br/>
                             Desenvolvido por
-                          <a href="http://tagi.com.br" target="_blank"><img src="img/tagi.png" alt="tagi"></a>
+                          <a href="http://tagi.com.br" target="_blank"><img src="{% static 'img/tagi.png' %}    " alt="tagi"></a>
                       
                     </div>
                     <div class="col-md-6 text-right">
@@ -470,16 +468,16 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'vendor/scrollreveal/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+    <script src="{% static 'js/creative.min.js' %}"></script>
     <script>
       $('.carousel').carousel({
         interval: 8000
