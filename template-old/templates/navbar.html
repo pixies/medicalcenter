@@ -1,0 +1,27 @@
+{% load static %}
+{% block navbar %}
+ <!-- Main NavBar -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper pink accent-4">
+        <div class="container">
+          <a href="#" class="brand-logo">
+              <img src="{% static 'images/logo-white-2.png' %}" alt="">
+          </a>
+        </div>
+        <a href="#" data-target="mobile-out" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
+        <div class="container">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Início</a></li>
+          <li><a href="news">Notícias</a></li>
+          <li><a href="contact">Contato</a></li>
+          <li><a href="area_pacient">Área do Paciente</a></li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  {% include 'sidebar.html' %}
+
+{% endblock navbar %}

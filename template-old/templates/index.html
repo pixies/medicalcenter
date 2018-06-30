@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+    <title>
+      {% block title %}{{ head.title }}{% endblock title %}
+    </title>
+
+  <!-- CSS  -->
+    {% for s in head.scripts %}
+    <link href="{{ s.href }}" type="{{ s.type }}" rel="{{ s.rel }}" media="screen,projection"/>
+    {% endfor %}
+
+    <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+{% endblock head %}
+
+<!-- Landing page model -->
+{% block landing %}
+
+    {% block mainslide %}
+    {% endblock mainslide %}
+
+    {% block sectionOne %}
+        {% include '_sectionOne.html' %}
+    {% endblock sectionOne %}
+
+    {% block sectionAtendimento %}
+        {% include '_sectionAtendimento.html' %}
+    {% endblock sectionAtendimento %}
+
+    {% block login_rapido %}
+        {% include '_login_rapido.html' %}
+    {% endblock login_rapido %}
+
+    {% block section_blog %}
+        {% include '_section_blog.html' %}
+    {% endblock section_blog %}
+
+
+    <!--
+    { % block sectionOne %}
+        { % include '_sectionOne.html' %}
+    { % endblock sectionOne %}
+
+    { % block sectionAtendimento %}
+        { % include '_sectionAtendimento.html' %}
+    { % endblock sectionAtendimento %}
+
+    { % block sectionDepoimentos %}
+        { % include '_sectionDepoimentos.html' %}
+    { % endblock sectionDepoimentos %}
+
+    { % block sectionAreaPaciente %}
+        { % include '_sectionAreaPaciente.html' %}
+    { % endblock sectionAreaPaciente %}
+-->
+{% endblock landing %}
