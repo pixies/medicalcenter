@@ -27,6 +27,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static 'css/creative.css' %}" rel="stylesheet">
+    <link href="{% static 'css/aos.css' %}" rel="stylesheet">
 
 
     <style> 
@@ -42,12 +43,28 @@
         .crt-panel-next {
           right:12px !important;
         }
+        #texto_left {
+
+        position: relative;
+        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+        animation-name: example;
+        animation-duration: 3s;
+        }
+        #texto_right {
+
+        position: relative;
+        -webkit-animation-name: example4; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+        animation-name: example4;
+        animation-duration: 3s;
+        } 
         #card-left {
 
             position: relative;
-            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-name: example4; /* Safari 4.0 - 8.0 */
             -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-            animation-name: example;
+            animation-name: example4;
             animation-duration: 1s;
         }
         #card-right {
@@ -57,7 +74,15 @@
           -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
           animation-name: example2;
           animation-duration: 1s;
-        }        
+        }    
+        #card-rosa {
+
+          position: relative;
+          -webkit-animation-name: example5; /* Safari 4.0 - 8.0 */
+          -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+          animation-name: example5;
+          animation-duration: 3s;
+          }        
         /* Safari 4.0 - 8.0 */
         @-webkit-keyframes example {
             0%   {left:-200px; top:0px;}
@@ -77,6 +102,36 @@
         /* Standard syntax */
         @keyframes example2 {
             0%   {left:200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        @-webkit-keyframes example3 {
+            0%   {left:-500px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        /* Standard syntax */
+        @keyframes example3 {
+            0%   {left:-200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        @-webkit-keyframes example4 {
+            0%   {left:-200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        /* Standard syntax */
+        @keyframes example4 {
+            0%   {left:-200px; top: 0px;}
+            100% {left:0px; top:0px;}
+        }
+        @-webkit-keyframes example5 {
+            0%   {left:0px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        /* Standard syntax */
+        @keyframes example5 {
+            0%   {left:0px; top:0px;}
             100% {left:0px; top:0px;}
         }
         </style>
@@ -126,13 +181,17 @@
 
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
-        <div class="row" style="background-color: #ff6699;opacity: 0.7; height: 100%; width: 90%; margin: auto;">
+        <div class="row" style="background-color: #ff6699;opacity: 0.7; height: 100%; width: 90%; margin: auto;"  data-aos="flip-down">
           <div class="col-lg-10 mx-auto">
 
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5"><h3>Tenha acesso rápido e fácil a todos os seus exames através da área do paciente!</h3></p>
+            <div >
+            <p class="text-faded mb-5" ><h3>Tenha acesso rápido e fácil a todos os seus exames através da área do paciente!</h3></p>
+            </div>
+            <div >
             <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="/login">Entrar</a>
+          </div>
           </div>
         </div>
       </div>
@@ -141,15 +200,15 @@
     <section class="bg-primary" id="sobre" style="height: 700px;">
       <div class="container my-auto" >
           <div class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center" data-aos="fade-right">
               <img style="height: 200px; width: 200px;" class="center responsive-img rounded-circle" src="{% static 'img/perfil-mini.jpg' %}" alt="">
             </div>
-            <div class="col-md-8 mx-auto text-justify">
-                <h2 class="section-heading text-white text-center text-md-left">Dr. Lourival</h2>
+            <div class="col-md-8 mx-auto text-justify" data-aos="fade-left">
+                <h2 class="section-heading text-white text-center text-md-left" >Dr. Lourival</h2>
                 <hr class="light my-4">
-                <p class="text-faded mb-4"><h6 style="color: #fff;">Formado pela Universidade Federal de Pernambuco, possui residência médica em Ginecologia e Obstetricia e especialização em colposcopia pela mesma instituição. Especialização em Ultrassonografia Ginecológica e Obstétricia pelo Cetrus.</h6></p>
+                <p class="text-faded mb-4"><h6 style="color: #fff;" >Formado pela Universidade Federal de Pernambuco, possui residência médica em Ginecologia e Obstetricia e especialização em colposcopia pela mesma instituição. Especialização em Ultrassonografia Ginecológica e Obstétricia pelo Cetrus.</h6></p>
                 <div class="row ">
-                    <div class="col-12 text-center text-md-left">
+                    <div class="col-12 text-center text-md-left" >
                         <a href="https://www.facebook.com/profile.php?id=100010762778304" style="text-decoration: none;">
                             <i class="mdi mdi-facebook-box mdi-48px" style="color: #fff;" aria-hidden="true"></i>
                         </a>
@@ -179,42 +238,42 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6 text-center card text-white" id="card-left" style="background-color: #fff">
+          <div class="col-lg-4 col-md-6 text-center card text-white" data-aos="fade-right" style="background-color: #fff">
             <div class="service-box mt-5 mx-auto">
                 <img src="{% static 'img/servicos/icone_utero.png' %}" alt="">
               <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Consulta Ginecológica</h3>
               <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">O Ginecologista tem papel bastante na vida da mulher, desde a adolescência até a idade adulta. É esse profissional que vai acompanhá-la por toda sua vida, provendo informações, realizando prevenções, tratamentos e controlando sua saúde.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" id="card-right">
+          <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff"  data-aos="flip-down">
             <div class="service-box mt-5 mx-auto">
                 <img src="{% static 'img/servicos/pre-natal.png' %}" alt="">
               <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Pré-Natal</h3>
               <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">É importante que a s futuras mamães comecem a fazer seu pré-natal assim que tiverem a gravidez confirmada ou antes mesmo de pensar em engravidar, alguns exames e medicações são importantes para prevenir problemas que possam afetar a criança ou o seu desenvolvimento ainda no útero.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 text-center card text-white" id="card-right">
+          <div class="col-lg-4 col-md-6 text-center card text-white" data-aos="fade-left">
             <div class="service-box mt-5 mx-auto">
               <img src="{% static 'img/servicos/preventivo.png' %}" alt="">
               <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Exame Preventivo</h3>
               <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;" >O exame preventivo do câncer do colo do útero (Papanicolau) é a principal estratégia para detectar lesões no colo do útero. É indolor, simples e rápido. Mulheres grávidas também podem se submeter ao exame, sem prejuízo para a saúde do bebê. Para realizar a mulher não pode está menstruada ou ter relações no dia anterior ao exame.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" id="card-left">
+          <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" data-aos="fade-right">
             <div class="service-box mt-5 mx-auto">
                 <img src="{% static 'img/servicos/colposcopia.png' %}" alt="">
               <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Colposcopia</h3>
               <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">É um exame que permite visualizar a vagina e o colo do útero através de um aparelho chamado Colposcópio. Este exame é um grande aliado no diagnóstico e tratamento do HPV e do câncer do colo do útero. O exame é realizado no próprio consultório médico, é indolor. Pode ser realizado em mulheres grávidas.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" id="card-left">
+          <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" data-aos="flip-down">
               <div class="service-box mt-5 mx-auto">
                   <img src="{% static 'img/servicos/ultrason.png' %}" alt="">
                 <h3 class="mb-3 card-header" style="height: 100px; background-color: #fff; color: black;">Ultrassonografia Obstétrica</h3>
                 <p class="text-muted mb-0 text-justify card-body" style="text-align-last: left;">A ultrassonografia, conhecida também como ecografia, é um exame não invasivo que consiste na emissão de ondas de som com o intuito de criar uma imagem. Na ultrassonografia obstétrica, observamos o feto, a placenta, o líquido e muitas outras coisas sobre como anda o seu bebê.</p>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" id="card-right">
+            <div class="col-lg-4 col-md-6 text-center card text-white" style="background-color: #fff" data-aos="fade-left">
                 <div class="service-box mt-5 mx-auto">
                     <img src="{% static 'img/servicos/transvaginal.png' %}" alt="">
                   <h3 class="mb-3 text-center card-header" style="height: 100px; background-color: #fff; color: black;">Ultrassonografia Transvaginal</h3>
@@ -225,8 +284,8 @@
       </div>
     </section>
 
-    <section class="bg-primary" id="midias" style="height: 900px;">
-        <div class="container">
+    <section class="bg-primary" id="midias" style="height: 900px;" data-aos="flip-down">
+        <div class="container" >
             <div class="row">
               <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-white" >Mídias Sociais</h2>
@@ -234,7 +293,7 @@
               </div>
             </div>
           </div>
-      <div class="container-fluid">
+      <div class="container-fluid" >
         <div class="row no-gutters popup-gallery">
           <div class="container text-center">
               <!-- Place <div> tag where you want the feed to appear -->
@@ -255,8 +314,8 @@
       </div>
     </section>
 
-    <section class="text-black" style="background-color: #fff;height: 700px;" id="depoimentos">
-        <div class="container">
+    <section class="text-black" style="background-color: #fff;height: 700px;" id="depoimentos" data-aos="flip-left">
+        <div class="container" >
             <div class="row">
               <div class="col-lg-12 text-center">
                 <h2 class="section-heading" >Depoimentos</h2>
@@ -264,7 +323,7 @@
               </div>
             </div>
           </div>
-          <div class="container-fluid p-0">
+          <div class="container-fluid p-0" >
 
             <div class="container">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -329,7 +388,7 @@
             <h2 class="section-heading text-white">Localização</h2>
             <hr class="light my-4">
               <div class="row">
-                  <div class="col-lg-5 text-lg-right text-md-center text-white">
+                  <div class="col-lg-5 text-lg-right text-md-center text-white" data-aos="fade-right">
                     <h6>
                       <address>
                           <i class="fa fa-map-marker"></i>
@@ -339,7 +398,7 @@
                       </address>
                     </h6>
                   </div>
-                  <div class="col-lg-7">
+                  <div class="col-lg-7" data-aos="fade-left">
                       <div id="map" style="width:100%;height:400px;"></div>
                   </div>
               </div>
@@ -352,7 +411,7 @@
 
         <!-- Contact -->
         <section id="contact" style="background-color: #fff;height: 900px;">
-            <div class="container">
+            <div class="container" data-aos="fade-left">
               <div class="row">
                 <div class="col-lg-12 text-center">
                   <h2 class="section-heading text-uppercase" style="color:black;">Contato</h2>
@@ -360,7 +419,7 @@
                   <h3 class="section-subheading text-muted">Deixe-nos uma mensagem.</h3>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" >
                 <div class="col-lg-12">
                   <form id="contactForm" name="sentMessage">
                     <div class="row">
@@ -411,7 +470,7 @@
 
               <div class="container bg-primary">
                   <div class="row">
-                    <div class="col-lg-4 col-md-6 text-center card text-white" id="card-left" style="background-color: #ff6699">
+                    <div class="col-lg-4 col-md-6 text-center card text-white" data-aos="fade-right" style="background-color: #ff6699">
                       <div class="service-box mt-2 mx-auto">
                           <img src="{% static 'img/blog/vacina.jpg' %}" style="height: 220px; width: 100%;" alt="">
                         <h5 class="card-header text-white" style="height: 100px; background-color: #ff6699; "><b>O que você precisa saber sobre a vacina da Febre Amarela</b></h5>
@@ -419,7 +478,7 @@
                         <p class="text-justify card-body text-white" style="text-align-last: left; margin-top: -10px">O Ginecologista tem papel bastante na vida da mulher, desde a adolescência até a idade adulta. É esse profissional que vai acompanhá-la por toda sua vida [...]</p>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 text-center card text-white" id="card-left" style="background-color: #ff6699">
+                    <div class="col-lg-4 col-md-6 text-center card text-white" data-aos="fade-down" style="background-color: #ff6699">
                       <div class="service-box mt-2 mx-auto">
                           <img src="{% static 'img/blog/vacina.jpg' %}" style="height: 220px; width: 100%;" alt="">
                         <h5 class="card-header text-white" style="height: 100px; background-color: #ff6699; "><b>O que você precisa saber sobre a vacina da Febre Amarela</b></h5>
@@ -427,7 +486,7 @@
                         <p class="text-justify card-body text-white" style="text-align-last: left; margin-top: -10px">O Ginecologista tem papel bastante na vida da mulher, desde a adolescência até a idade adulta. É esse profissional que vai acompanhá-la por toda sua vida [...]</p>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 text-center card text-white" id="card-left" style="background-color: #ff6699">
+                    <div class="col-lg-4 col-md-6 text-center card text-white" data-aos="fade-left" style="background-color: #ff6699">
                       <div class="service-box mt-2 mx-auto">
                           <img src="{% static 'img/blog/vacina.jpg' %}" style="height: 220px; width: 100%;" alt="">
                         <h5 class="card-header text-white" style="height: 100px; background-color: #ff6699; "><b>O que você precisa saber sobre a vacina da Febre Amarela</b></h5>
@@ -482,6 +541,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="{% static 'js/creative.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
     <script>
       $('.carousel').carousel({
         interval: 8000
@@ -551,6 +611,9 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGikhJ_PRwCfE6cjMK9i1-o3HYX4GpY_M&callback=initMap"
     async defer></script>
+    <script>
+        AOS.init({offset:200,duration:1000});
+    </script>
 
 
   </body>
