@@ -73,7 +73,23 @@ table {
           -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
           animation-name: example2;
           animation-duration: 1s;
-        }        
+        }
+        #texto_left {
+
+position: relative;
+-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+animation-name: example;
+animation-duration: 3s;
+}
+#texto_right {
+
+position: relative;
+-webkit-animation-name: example4; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+animation-name: example4;
+animation-duration: 3s;
+}         
         /* Safari 4.0 - 8.0 */
         @-webkit-keyframes example {
             0%   {left:-200px; top:0px;}
@@ -93,6 +109,21 @@ table {
         /* Standard syntax */
         @keyframes example2 {
             0%   {left:200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+                /* Standard syntax */
+                @keyframes example3 {
+            0%   {left:-200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        @-webkit-keyframes example4 {
+            0%   {left:-200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        /* Standard syntax */
+        @keyframes example4 {
+            0%   {left:-200px; top: 0px;}
             100% {left:0px; top:0px;}
         }
         </style>
@@ -124,14 +155,14 @@ table {
 
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
-        <div class="row" style="background-color: #ff6699;opacity: 0.9; height: 100%; width: 90%; margin: auto;">
+        <div class="row" style="background-color: #ff6699;opacity: 0.9; height: 100%; width: 90%; margin: auto;" id="texto_right">
           <div class="col-lg-10  mx-auto mt-5">
             <h1 class="text-uppercase mt-5">
               <strong>Área do paciente!</strong>
             </h1>
             <hr class="light">
           </div>
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-8 mx-auto" id="texto_left">
             <h5>Bem vindo Maria Severina!</h5>
             <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="/login">Sair</a>
 
