@@ -1,0 +1,379 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    -->
+    <link href='https://fonts.google.com/specimen/Roboto?selection.family=Cabin' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdn.materialdesignicons.com/2.2.43/css/materialdesignicons.min.css">
+    
+    <!-- Plugin CSS -->
+    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/creative.css' %}" rel="stylesheet">
+
+
+    <style> 
+header.masthead {
+  background-image: url("../static/img/paciente/header.jpg");
+}
+.list-group-item.list-group-item-action.active {
+   background-color: gray;
+   border-color: white; 
+  }
+  .list-group {
+    flex-direction: row;
+  }
+  #scrolltable { margin-top: 20px; height: 300px; height: 500px; overflow: auto; }
+#scrolltable th div { position: absolute; margin-top: -20px; }
+table {
+  color: white
+}
+
+        #map {
+          box-shadow: 3px 3px 18px 5px gray;
+        }
+        .card {
+          border: 0px;
+        }
+        .crt-panel-prev {
+          left:12px !important;
+        }
+        .crt-panel-next {
+          right:12px !important;
+        }
+        #card-left {
+
+            position: relative;
+            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            animation-name: example;
+            animation-duration: 1s;
+        }
+        #card-right {
+
+          position: relative;
+          -webkit-animation-name: example2; /* Safari 4.0 - 8.0 */
+          -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+          animation-name: example2;
+          animation-duration: 1s;
+        }
+        #texto_left {
+
+position: relative;
+-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+animation-name: example;
+animation-duration: 3s;
+}
+#texto_right {
+
+position: relative;
+-webkit-animation-name: example4; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+animation-name: example4;
+animation-duration: 3s;
+}         
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example {
+            0%   {left:-200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        /* Standard syntax */
+        @keyframes example {
+            0%   {left:-200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        @-webkit-keyframes example2 {
+            0%   {left:200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        /* Standard syntax */
+        @keyframes example2 {
+            0%   {left:200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+                /* Standard syntax */
+                @keyframes example3 {
+            0%   {left:-200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        @-webkit-keyframes example4 {
+            0%   {left:-200px; top:0px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        /* Standard syntax */
+        @keyframes example4 {
+            0%   {left:-200px; top: 0px;}
+            100% {left:0px; top:0px;}
+        }
+        </style>
+
+        <style>
+        section#contact{background-color:#212529;background-repeat:no-repeat;background-position:center}section#contact .section-heading{color:#fff}section#contact .form-group{margin-bottom:25px}section#contact .form-group input,section#contact .form-group textarea{padding:20px}section#contact .form-group input.form-control{height:auto}section#contact .form-group textarea.form-control{height:248px}section#contact .form-control:focus{border-color:#fed136;box-shadow:none}section#contact ::-webkit-input-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact :-moz-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact ::-moz-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}section#contact :-ms-input-placeholder{font-weight:700;color:#ced4da;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+        footer{padding:25px 0;text-align:center;box-shadow: -10px 0px 20px 1px gray;}footer span.copyright{font-size:90%;line-height:40px;text-transform:none;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}footer ul.quicklinks{font-size:90%;line-height:40px;margin-bottom:0;text-transform:none;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif}
+        </style>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{% static 'img/logo-white.png' %}" alt=""></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#exames">Visualizar Exames</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row" style="background-color: #ff6699;opacity: 0.9; height: 100%; width: 90%; margin: auto;" id="texto_right">
+          <div class="col-lg-10  mx-auto mt-5">
+            <h1 class="text-uppercase mt-5">
+              <strong>Área do paciente!</strong>
+            </h1>
+            <hr class="light">
+          </div>
+          <div class="col-lg-8 mx-auto" id="texto_left">
+            <h5>Bem vindo Maria Severina!</h5>
+            <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="/login">Sair</a>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="" id="exames" style="background-color:white;;height: 900px;">
+            <div class="container">
+              <div class="row">
+                
+                <div class="col-lg-12 mx-auto text-center">
+                  <h2 class="section-heading text-dark">Lista de exames</h2>
+                  <hr class="dark my-4">
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="container">
+               
+                      
+                
+                    <input type="text" id="myInputExames" class="form-control" onkeyup="myFunctionExames()" placeholder="Pesquisar tipo do exame..." title="Type in a name">
+                    <div id="scrolltable">
+                      <table class="table table-striped" style="color: black" id="exames">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Tipo do exame</th>
+                            <th scope="col">Data do cadastro</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        
+                        <tbody>
+                          <tr>
+                            <td>Hemoglobina</td>
+                            <td>25/06/2018</td>  
+                            <td><a href=""><i class="mdi mdi-pencil mdi-24px" style="color: black"></i></a><a href=""><i class="mdi mdi-delete mdi-24px" style="color: black"></i></a><a href=""><i class="mdi mdi-account-search mdi-24px" style="color: black"></i></a></td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                      </div>
+                      
+    
+                
+            </div>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <footer>
+                <div class="container">
+                    
+                  <div class="row">
+                    <div class="col-7     text-left">
+                      <b>Dr. Lourival Rodriguês <br>    </b>Ginecologia e Obstetricia <br>CRM-SP XXXXXXX <br/>
+                            
+                          
+                      
+                    </div>
+                    <div class="col-5 text-right">
+                        <a href="https://www.facebook.com/profile.php?id=100010762778304" style="text-decoration: none;">
+                          <i class="mdi mdi-facebook-box mdi-36px" style="color: black;" aria-hidden="true"></i>
+                      </a>
+                      <a href="https://www.instagram.com/dr.lourival/" style="text-decoration: none;">
+                        <i class="mdi mdi-instagram mdi-36px" style="color: black;" aria-hidden="true"></i>
+                      </a>
+                      <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5587996694511" style="text-decoration: none;">
+                        <i class="mdi mdi-whatsapp mdi-36px" style="color: black;" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                    </div>
+                    
+                  </div>
+
+                
+              </footer>
+              <div class="text-center  bg-primary" style="opacity: 0.5;">
+                  Desenvolvido por <a href="http://tagi.com.br" target="_blank"><img src="{% static 'img/tagi.png' %}    " alt="tagi"></a>
+            </div>
+
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'vendor/scrollreveal/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/creative.min.js' %}"></script>
+    <script>
+      $('.carousel').carousel({
+        interval: 8000
+      })
+    </script>
+
+<script>
+    function myFunction() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("pacientes");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    function myFunction3() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput3");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("contatos");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+    <script>
+    function myFunctionArtigos() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInputArtigos");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("artigos");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+    <script>
+        function myFunctionExames() {
+          var input, filter, table, tr, td, i;
+          input = document.getElementById("myInputExames");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("exames");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
+    <script>
+        function myFunctionDepoimentos() {
+          var input, filter, table, tr, td, i;
+          input = document.getElementById("myInputDepoimentos");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("depoimentos");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGikhJ_PRwCfE6cjMK9i1-o3HYX4GpY_M&callback=initMap"
+    async defer></script>
+
+
+  </body>
+
+</html>

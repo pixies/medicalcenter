@@ -25,7 +25,7 @@ SECRET_KEY = 'gpe#o4p+8q62rvy9$x1+j5^6n*6p49c%#%^e(kptf(=v!0tny)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.107']
 
 
 # Application definition
@@ -40,8 +40,7 @@ INSTALLED_APPS = [
 
     #'bootstrap_admin',
     'endereco',
-    'conta',
-
+    
     'website',
     'blog',
     'atendimento',
